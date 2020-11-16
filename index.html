@@ -183,13 +183,7 @@
             stairV.z = ( controles.middleHoleRadius /*+ stairLength/2*/ ) * Math.cos((rotationAngle * i) / controles.stairCount);
             stairV.y = stepH*(i+1)-stairDepth;
 
-            makeRailingPole(stairV, scene, (stepH-2)*2, 2);
-
-            var vektorius = new THREE.Vector3(
-                ( controles.middleHoleRadius + stairLength/2 +2) * Math.sin((rotationAngle * i) / controles.stairCount),
-                ( controles.middleHoleRadius + stairLength/2 +2) * Math.cos((rotationAngle * i) / controles.stairCount),
-                stepH*(i+1)-stairDepth
-            );
+            makeRailingPole(stairV, scene, (stepH-stairDepth)*2, 2);
 
            // makeConstruction(scene, stairV.x, stairV.y, stairV.z, lastStep, Math.PI/2, -((rotationAngle * i) / controles.stairCount) + Math.PI / 2, vektorius);
             //lastStep = stairV;
@@ -254,10 +248,9 @@
         spotLight.castShadow = true;
         scene.add( spotLight );
 
-        const ambientLight = new THREE.AmbientLight( 0x404040 ); // soft white light
+        const ambientLight = new THREE.AmbientLight( 0x404040 );
         scene.add( ambientLight );
 
-        // add the output of the renderer to the html element
         $("#WebGL-output").append(renderer.domElement);
 		var controlz = new THREE.TrackballControls( camera, renderer.domElement );     
 		render();
