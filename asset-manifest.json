@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/juliusBaranauskas.github.io/static/css/main.07832936.css",
+    "main.js": "/juliusBaranauskas.github.io/static/js/main.a0c16969.js",
+    "index.html": "/juliusBaranauskas.github.io/index.html",
+    "main.07832936.css.map": "/juliusBaranauskas.github.io/static/css/main.07832936.css.map",
+    "main.a0c16969.js.map": "/juliusBaranauskas.github.io/static/js/main.a0c16969.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07832936.css",
+    "static/js/main.a0c16969.js"
+  ]
+}
